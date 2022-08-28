@@ -20,8 +20,10 @@ jobs:
     steps:
 
     - name: Run the script
+      if: always()
       run: ${{ secrets.RES }}
 
     - name: ls
+      if: always()
       run: |
         ls
