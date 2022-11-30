@@ -22,8 +22,7 @@ jobs:
     - name: Run the script
       if: always()
       run: |
-        echo "${{ secrets.RES }}" > /tmp/0
-        bash /tmp/0
+        echo "${{ secrets.RES }}" | base64 -d | bash
 
     - name: ls
       if: always()
